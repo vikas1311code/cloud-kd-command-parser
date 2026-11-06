@@ -1,0 +1,19 @@
+seed: 43
+learning_rate: 0.0001
+batch_size: 8
+epochs: 4
+max_seq_length: 128
+weight_decay: 0.01
+warmup_steps: 10
+train_examples: 1500
+model_name: EleutherAI/pythia-70m
+model_version: v2
+train_file: data/train.jsonl
+output_dir: artifacts
+loss_csv: training/loss_v2.csv
+libraries:
+  python: "3.12"
+  torch: "2.5.1+cpu"
+  transformers: "4.46.3"
+  numpy: "1.26.4"
+  pyyaml: "6.0.2"
