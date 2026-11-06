@@ -5,3 +5,7 @@ tmp_results/
 *.bin
 *.pt
 .venv/
+data/train.jsonl
+artifacts/
+.hf_cache/
+training/loss_smoke.csv
