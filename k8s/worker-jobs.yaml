@@ -1,0 +1,59 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: teacher-shard-0
+  namespace: pipeline
+spec:
+  backoffLimit: 6
+  template:
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - name: worker
+          image: teacher-worker:v1
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: SHARD_INDEX
+              value: "0"
+            - name: SHARD_COUNT
+              value: "2"
+          envFrom:
+            - secretRef:
+                name: s3-credentials
+          volumeMounts:
+            - name: prompt
+              mountPath: /config
+      volumes:
+        - name: prompt
+          configMap:
+            name: teacher-prompt
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: teacher-shard-1
+  namespace: pipeline
+spec:
+  backoffLimit: 6
+  template:
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - name: worker
+          image: teacher-worker:v1
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: SHARD_INDEX
+              value: "1"
+            - name: SHARD_COUNT
+              value: "2"
+          envFrom:
+            - secretRef:
+                name: s3-credentials
+          volumeMounts:
+            - name: prompt
+              mountPath: /config
+      volumes:
+        - name: prompt
+          configMap:
+            name: teacher-prompt
