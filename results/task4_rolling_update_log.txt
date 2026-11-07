@@ -1,0 +1,57 @@
+23:36:33  start state: 2 ready replicas, probe -> 200 v1 kd-parser-655d879895-nn297
+23:36:33  locust started (4 users, 4 minutes)
+23:36:53  rollout history before:
+deployment.apps/kd-parser 
+REVISION  CHANGE-CAUSE
+1         <none>
+2         <none>
+3         <none>
+23:36:54  set env: deployment.apps/kd-parser env updated
+23:37:33  Waiting for deployment "kd-parser" rollout to finish: 0 out of 2 new replicas have been updated...
+Waiting for deployment "kd-parser" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "kd-parser" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "kd-parser" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "kd-parser" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "kd-parser" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "kd-parser" rollout to finish: 1 old replicas are pending termination...
+deployment "kd-parser" successfully rolled out
+23:37:33  update to v2 finished after 39 s
+23:37:35  probe after update: (200, 'v2', 'kd-parser-ccf76b799-m55bm')
+23:37:39  probe after update: (200, 'v2', 'kd-parser-ccf76b799-m55bm')
+23:37:45  probe after update: (200, 'v2', 'kd-parser-ccf76b799-ffkw2')
+23:37:50  probe after update: (200, 'v2', 'kd-parser-ccf76b799-ffkw2')
+23:38:02  rollout undo: deployment.apps/kd-parser rolled back
+Warning: resource deployments/kd-parser was previously managed with 'kubectl apply'. Rolling back will not update the kubectl.kubernetes.io/last-applied-configuration annotation, which may cause unexpected behavior on future 'kubectl apply' operations. Consider using 'kubectl apply' with your previous configuration file instead.
+23:38:38  Waiting for deployment "kd-parser" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "kd-parser" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "kd-parser" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "kd-parser" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "kd-parser" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "kd-parser" rollout to finish: 1 old replicas are pending termination...
+deployment "kd-parser" successfully rolled out
+23:38:38  rollback finished after 35 s
+23:38:40  probe after rollback: (200, 'v1', 'kd-parser-655d879895-b4kzq')
+23:38:46  probe after rollback: (200, 'v1', 'kd-parser-655d879895-gs8xh')
+23:38:51  probe after rollback: (200, 'v1', 'kd-parser-655d879895-b4kzq')
+23:38:54  probe after rollback: (200, 'v1', 'kd-parser-655d879895-gs8xh')
+23:38:57  env now (MODEL_VERSION, MODEL_URI): MODEL_URI=s3://models/v1 MODEL_VERSION=v1
+23:38:58  pods:
+NAME                         READY   STATUS    RESTARTS   AGE
+kd-parser-655d879895-b4kzq   1/1     Running   0          55s
+kd-parser-655d879895-gs8xh   1/1     Running   0          38s
+23:40:35  locust finished after 242 s
+23:40:35  Locust Aggregated: 480 requests, 2 failures = 0.417 %
+23:40:35  headers: {
+ "per_replica": {
+  "kd-parser-655d879895-qz7m4": 60,
+  "kd-parser-655d879895-nn297": 38,
+  "kd-parser-ccf76b799-m55bm": 81,
+  "kd-parser-ccf76b799-ffkw2": 47,
+  "kd-parser-655d879895-b4kzq": 134,
+  "kd-parser-655d879895-gs8xh": 120
+ },
+ "per_model_version": {
+  "v1": 352,
+  "v2": 128
+ }
+}
