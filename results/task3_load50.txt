@@ -1,0 +1,57 @@
+ready after 18 s
+request 01 status 200 ok=True 1.14s
+request 02 status 200 ok=True 0.55s
+request 03 status 200 ok=True 0.45s
+request 04 status 200 ok=True 0.47s
+request 05 status 200 ok=True 0.52s
+request 06 status 200 ok=True 0.45s
+request 07 status 200 ok=True 0.47s
+request 08 status 200 ok=True 0.45s
+request 09 status 200 ok=True 0.48s
+request 10 status 200 ok=True 0.42s
+request 11 status 200 ok=True 0.46s
+request 12 status 200 ok=True 0.46s
+request 13 status 200 ok=True 0.47s
+request 14 status 200 ok=True 0.45s
+request 15 status 200 ok=True 0.48s
+request 16 status 200 ok=True 0.47s
+request 17 status 200 ok=True 0.44s
+request 18 status 200 ok=True 0.54s
+request 19 status 200 ok=True 0.42s
+request 20 status 200 ok=True 0.47s
+request 21 status 200 ok=True 0.47s
+request 22 status 200 ok=True 0.44s
+request 23 status 200 ok=True 0.49s
+request 24 status 200 ok=True 0.47s
+request 25 status 200 ok=True 0.46s
+request 26 status 200 ok=True 0.55s
+request 27 status 200 ok=True 0.43s
+request 28 status 200 ok=True 0.46s
+request 29 status 200 ok=True 0.46s
+request 30 status 200 ok=True 0.46s
+request 31 status 200 ok=True 0.49s
+request 32 status 200 ok=True 0.45s
+request 33 status 200 ok=True 0.54s
+request 34 status 200 ok=True 0.44s
+request 35 status 200 ok=True 0.47s
+request 36 status 200 ok=True 0.45s
+request 37 status 200 ok=True 0.57s
+request 38 status 200 ok=True 0.49s
+request 39 status 200 ok=True 0.49s
+request 40 status 200 ok=True 0.50s
+request 41 status 200 ok=True 0.50s
+request 42 status 200 ok=True 0.48s
+request 43 status 200 ok=True 0.49s
+request 44 status 200 ok=True 0.46s
+request 45 status 200 ok=True 0.49s
+request 46 status 200 ok=True 0.48s
+request 47 status 200 ok=True 0.45s
+request 48 status 200 ok=True 0.51s
+request 49 status 200 ok=True 0.51s
+request 50 status 200 ok=True 0.49s
+
+requests ok: 50 / 50
+latency median 0.47s, p95 0.55s, max 1.14s
+docker stats samples: 22, peak memory seen 391.9 MiB (limit 1024 MiB)
+container state: OOMKilled=false Status=running Restarts=0
+cgroup memory.peak not available

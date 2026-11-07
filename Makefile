@@ -10,3 +10,7 @@ train-image:
 
 train: train-image
 > docker run --rm -e SUBSET=$(SUBSET) -e HF_HOME=/work/.hf_cache -v "$(CURDIR):/work" -w /work $(IMAGE) python training/train.py --config $(CONFIG)
+
+.PHONY: service-image
+service-image:
+> docker build -t kd-service:v1 service
