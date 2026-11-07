@@ -1,0 +1,20 @@
+{"id": "E01", "direction": "inbound", "protocol": "tcp", "port": 80, "address": "203.0.113.7", "expected": "allow"}
+{"id": "E02", "direction": "inbound", "protocol": "tcp", "port": 443, "address": "203.0.113.7", "expected": "allow"}
+{"id": "E03", "direction": "inbound", "protocol": "tcp", "port": 80, "address": "198.51.100.200", "expected": "deny"}
+{"id": "E04", "direction": "inbound", "protocol": "tcp", "port": 443, "address": "198.51.100.0", "expected": "deny"}
+{"id": "E05", "direction": "inbound", "protocol": "tcp", "port": 50000, "address": "198.51.100.77", "expected": "deny"}
+{"id": "E06", "direction": "inbound", "protocol": "tcp", "port": 22, "address": "10.20.5.130", "expected": "allow"}
+{"id": "E07", "direction": "inbound", "protocol": "tcp", "port": 22, "address": "10.20.5.100", "expected": "deny"}
+{"id": "E08", "direction": "inbound", "protocol": "tcp", "port": 22, "address": "203.0.113.7", "expected": "deny"}
+{"id": "E09", "direction": "inbound", "protocol": "tcp", "port": 40000, "address": "10.20.2.20", "expected": "allow"}
+{"id": "E10", "direction": "inbound", "protocol": "tcp", "port": 40000, "address": "203.0.113.7", "expected": "deny"}
+{"id": "E11", "direction": "inbound", "protocol": "tcp", "port": 1023, "address": "10.20.2.20", "expected": "deny"}
+{"id": "E12", "direction": "inbound", "protocol": "udp", "port": 443, "address": "203.0.113.7", "expected": "deny"}
+{"id": "E13", "direction": "inbound", "protocol": "tcp", "port": 8080, "address": "203.0.113.7", "expected": "deny"}
+{"id": "E14", "direction": "outbound", "protocol": "tcp", "port": 8000, "address": "10.20.3.250", "expected": "allow"}
+{"id": "E15", "direction": "outbound", "protocol": "tcp", "port": 8000, "address": "10.20.4.5", "expected": "allow", "note": "allowed by reply rule 110 because 8000 is inside 1024-65535; a stateless NACL cannot tell a reply from a new connection"}
+{"id": "E16", "direction": "outbound", "protocol": "tcp", "port": 8001, "address": "10.20.1.1", "expected": "allow", "note": "same reason as E15"}
+{"id": "E17", "direction": "outbound", "protocol": "tcp", "port": 1024, "address": "203.0.113.7", "expected": "allow"}
+{"id": "E18", "direction": "outbound", "protocol": "tcp", "port": 443, "address": "203.0.113.7", "expected": "deny"}
+{"id": "E19", "direction": "outbound", "protocol": "udp", "port": 50000, "address": "203.0.113.7", "expected": "deny"}
+{"id": "E20", "direction": "outbound", "protocol": "tcp", "port": 8000, "address": "10.20.4.0", "expected": "allow", "note": "same reason as E15"}

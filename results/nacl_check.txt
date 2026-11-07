@@ -1,0 +1,33 @@
+=== network/packets_sample.jsonl ===
+ S01  inbound  tcp port 443   192.0.2.55      -> ALLOW (rule 120)  OK
+ S02  inbound  tcp port 22    192.0.2.55      -> DENY  (no match (default deny))  OK
+ S03  outbound tcp port 8000  10.20.1.1       -> ALLOW (rule 100)  OK
+ S04  inbound  tcp port 443   198.51.100.9    -> DENY  (rule 100)  OK
+ S05  outbound tcp port 60000 192.0.2.55      -> ALLOW (rule 110)  OK
+ S06  inbound  tcp port 5432  10.20.5.20      -> DENY  (no match (default deny))  OK
+
+Correct: 6 / 6 = 100.0%
+
+=== network/packets_extra.jsonl (my own packets) ===
+ E01  inbound  tcp port 80    203.0.113.7     -> ALLOW (rule 110)  OK
+ E02  inbound  tcp port 443   203.0.113.7     -> ALLOW (rule 120)  OK
+ E03  inbound  tcp port 80    198.51.100.200  -> DENY  (rule 100)  OK
+ E04  inbound  tcp port 443   198.51.100.0    -> DENY  (rule 100)  OK
+ E05  inbound  tcp port 50000 198.51.100.77   -> DENY  (rule 100)  OK
+ E06  inbound  tcp port 22    10.20.5.130     -> ALLOW (rule 130)  OK
+ E07  inbound  tcp port 22    10.20.5.100     -> DENY  (no match (default deny))  OK
+ E08  inbound  tcp port 22    203.0.113.7     -> DENY  (no match (default deny))  OK
+ E09  inbound  tcp port 40000 10.20.2.20      -> ALLOW (rule 140)  OK
+ E10  inbound  tcp port 40000 203.0.113.7     -> DENY  (no match (default deny))  OK
+ E11  inbound  tcp port 1023  10.20.2.20      -> DENY  (no match (default deny))  OK
+ E12  inbound  udp port 443   203.0.113.7     -> DENY  (no match (default deny))  OK
+ E13  inbound  tcp port 8080  203.0.113.7     -> DENY  (no match (default deny))  OK
+ E14  outbound tcp port 8000  10.20.3.250     -> ALLOW (rule 100)  OK
+ E15  outbound tcp port 8000  10.20.4.5       -> ALLOW (rule 110)  OK
+ E16  outbound tcp port 8001  10.20.1.1       -> ALLOW (rule 110)  OK
+ E17  outbound tcp port 1024  203.0.113.7     -> ALLOW (rule 110)  OK
+ E18  outbound tcp port 443   203.0.113.7     -> DENY  (no match (default deny))  OK
+ E19  outbound udp port 50000 203.0.113.7     -> DENY  (no match (default deny))  OK
+ E20  outbound tcp port 8000  10.20.4.0       -> ALLOW (rule 110)  OK
+
+Correct: 20 / 20 = 100.0%
