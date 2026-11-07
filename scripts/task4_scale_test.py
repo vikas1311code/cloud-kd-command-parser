@@ -77,11 +77,17 @@ t_load = time.time()
 print("locust running for 3 minutes ...", flush=True)
 with open(CONSOLE, "w", encoding="utf-8") as cf:
     subprocess.run(
-        [sys.executable, "-m", "locust", "-f", "tools/locustfile.py", "--headless",
+        ["locust", "-f", "tools/locustfile.py", "--headless",
          "--users", "4", "--spawn-rate", "4", "--run-time", "3m", "--host", HOST,
          "--csv", "results/loadtest_scale"],
         stdout=cf, stderr=subprocess.STDOUT, env=env)
 print("locust finished after %.0f s, waiting for scale-down" % (time.time() - t_load), flush=True)
+if time.time() - t_load < 150:
+    stop.set()
+    th.join(timeout=30)
+    print("Locust ended after only %.0f s (expected about 180 s). Test INVALID, not measuring scale-down." % (time.time() - t_load))
+    print("See results/loadtest_scale_console.txt for the Locust error.")
+    raise SystemExit(1)
 
 t_wait = time.time()
 back = None

@@ -1,13 +1,163 @@
 time  hpa row / pods / top pods
-23:23:23  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     11h
-    pods: kd-parser-655d879895-qz7m4   1/1   Running   0     110s
-    top: kd-parser-655d879895-qz7m4   3m    375Mi
-23:23:28  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     11h
-    pods: kd-parser-655d879895-qz7m4   1/1   Running   0     116s
-    top: kd-parser-655d879895-qz7m4   3m    375Mi
-23:23:34  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     11h
-    pods: kd-parser-655d879895-qz7m4   1/1   Running   0     2m1s
-    top: kd-parser-655d879895-qz7m4   3m    375Mi
-23:23:39  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     11h
-    pods: kd-parser-655d879895-qz7m4   1/1   Running   0     2m7s
-    top: kd-parser-655d879895-qz7m4   141m   414Mi
+23:26:04  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     11h
+    pods: kd-parser-655d879895-qz7m4   1/1   Running   0     4m31s
+    top: kd-parser-655d879895-qz7m4   3m    422Mi
+23:26:09  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     11h
+    pods: kd-parser-655d879895-qz7m4   1/1   Running   0     4m38s
+    top: kd-parser-655d879895-qz7m4   3m    422Mi
+23:26:16  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     11h
+    pods: kd-parser-655d879895-qz7m4   1/1   Running   0     4m43s
+    top: kd-parser-655d879895-qz7m4   3m    422Mi
+23:26:21  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     11h
+    pods: kd-parser-655d879895-qz7m4   1/1   Running   0     4m49s
+    top: kd-parser-655d879895-qz7m4   3m    422Mi
+23:26:27  kd-parser   Deployment/kd-parser   cpu: 20%/70%   1     2     1     11h
+    pods: kd-parser-655d879895-qz7m4   1/1   Running   0     4m54s
+    top: kd-parser-655d879895-qz7m4   102m   453Mi
+23:26:32  kd-parser   Deployment/kd-parser   cpu: 20%/70%   1     2     1     11h
+    pods: kd-parser-655d879895-qz7m4   1/1   Running   0     5m
+    top: kd-parser-655d879895-qz7m4   102m   453Mi
+23:26:38  kd-parser   Deployment/kd-parser   cpu: 20%/70%   1     2     1     11h
+    pods: kd-parser-655d879895-qz7m4   1/1   Running   0     5m5s
+    top: kd-parser-655d879895-qz7m4   998m   476Mi
+23:26:43  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     1     11h
+    pods: kd-parser-655d879895-6tvmx   0/1   Running   0     3s | kd-parser-655d879895-qz7m4   1/1   Running   0     5m11s
+    top: kd-parser-655d879895-qz7m4   998m   476Mi
+23:26:49  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     1     11h
+    pods: kd-parser-655d879895-6tvmx   0/1   Running   0     9s | kd-parser-655d879895-qz7m4   1/1   Running   0     5m17s
+    top: kd-parser-655d879895-qz7m4   998m   476Mi
+23:26:55  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     1     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     14s | kd-parser-655d879895-qz7m4   1/1   Running   0     5m22s
+    top: kd-parser-655d879895-6tvmx   732m   375Mi    | kd-parser-655d879895-qz7m4   999m   478Mi
+23:27:00  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     20s | kd-parser-655d879895-qz7m4   1/1   Running   0     5m28s
+    top: kd-parser-655d879895-6tvmx   732m   375Mi    | kd-parser-655d879895-qz7m4   999m   478Mi
+23:27:06  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     25s | kd-parser-655d879895-qz7m4   1/1   Running   0     5m33s
+    top: kd-parser-655d879895-6tvmx   732m   375Mi    | kd-parser-655d879895-qz7m4   999m   478Mi
+23:27:12  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     31s | kd-parser-655d879895-qz7m4   1/1   Running   0     5m39s
+    top: kd-parser-655d879895-6tvmx   997m   433Mi    | kd-parser-655d879895-qz7m4   999m   502Mi
+23:27:17  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     36s | kd-parser-655d879895-qz7m4   1/1   Running   0     5m44s
+    top: kd-parser-655d879895-6tvmx   997m   433Mi    | kd-parser-655d879895-qz7m4   999m   502Mi
+23:27:23  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     42s | kd-parser-655d879895-qz7m4   1/1   Running   0     5m50s
+    top: kd-parser-655d879895-6tvmx   997m   433Mi    | kd-parser-655d879895-qz7m4   999m   499Mi
+23:27:28  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     48s | kd-parser-655d879895-qz7m4   1/1   Running   0     5m56s
+    top: kd-parser-655d879895-6tvmx   997m   433Mi    | kd-parser-655d879895-qz7m4   999m   499Mi
+23:27:34  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     53s | kd-parser-655d879895-qz7m4   1/1   Running   0     6m1s
+    top: kd-parser-655d879895-6tvmx   997m   433Mi    | kd-parser-655d879895-qz7m4   999m   499Mi
+23:27:40  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     60s | kd-parser-655d879895-qz7m4   1/1   Running   0     6m8s
+    top: kd-parser-655d879895-6tvmx   999m   433Mi    | kd-parser-655d879895-qz7m4   998m   505Mi
+23:27:46  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     65s | kd-parser-655d879895-qz7m4   1/1   Running   0     6m13s
+    top: kd-parser-655d879895-6tvmx   999m   433Mi    | kd-parser-655d879895-qz7m4   998m   505Mi
+23:27:51  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     72s | kd-parser-655d879895-qz7m4   1/1   Running   0     6m20s
+    top: kd-parser-655d879895-6tvmx   999m   433Mi    | kd-parser-655d879895-qz7m4   998m   505Mi
+23:27:58  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     77s | kd-parser-655d879895-qz7m4   1/1   Running   0     6m25s
+    top: kd-parser-655d879895-6tvmx   998m    433Mi    | kd-parser-655d879895-qz7m4   1000m   508Mi
+23:28:03  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     83s | kd-parser-655d879895-qz7m4   1/1   Running   0     6m31s
+    top: kd-parser-655d879895-6tvmx   998m    433Mi    | kd-parser-655d879895-qz7m4   1000m   508Mi
+23:28:09  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     88s | kd-parser-655d879895-qz7m4   1/1   Running   0     6m36s
+    top: kd-parser-655d879895-6tvmx   1000m   437Mi    | kd-parser-655d879895-qz7m4   999m    508Mi
+23:28:15  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     94s | kd-parser-655d879895-qz7m4   1/1   Running   0     6m42s
+    top: kd-parser-655d879895-6tvmx   1000m   437Mi    | kd-parser-655d879895-qz7m4   999m    508Mi
+23:28:20  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     100s | kd-parser-655d879895-qz7m4   1/1   Running   0     6m48s
+    top: kd-parser-655d879895-6tvmx   1000m   437Mi    | kd-parser-655d879895-qz7m4   999m    508Mi
+23:28:26  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     105s | kd-parser-655d879895-qz7m4   1/1   Running   0     6m53s
+    top: kd-parser-655d879895-6tvmx   999m   437Mi    | kd-parser-655d879895-qz7m4   999m   508Mi
+23:28:32  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     111s | kd-parser-655d879895-qz7m4   1/1   Running   0     6m59s
+    top: kd-parser-655d879895-6tvmx   999m   437Mi    | kd-parser-655d879895-qz7m4   999m   508Mi
+23:28:37  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     116s | kd-parser-655d879895-qz7m4   1/1   Running   0     7m4s
+    top: kd-parser-655d879895-6tvmx   999m   437Mi    | kd-parser-655d879895-qz7m4   999m   508Mi
+23:28:43  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     2m2s | kd-parser-655d879895-qz7m4   1/1   Running   0     7m10s
+    top: kd-parser-655d879895-6tvmx   998m   437Mi    | kd-parser-655d879895-qz7m4   999m   508Mi
+23:28:48  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     2m8s | kd-parser-655d879895-qz7m4   1/1   Running   0     7m16s
+    top: kd-parser-655d879895-6tvmx   998m   437Mi    | kd-parser-655d879895-qz7m4   999m   508Mi
+23:28:54  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     2m13s | kd-parser-655d879895-qz7m4   1/1   Running   0     7m21s
+    top: kd-parser-655d879895-6tvmx   999m   437Mi    | kd-parser-655d879895-qz7m4   998m   508Mi
+23:28:59  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     2m20s | kd-parser-655d879895-qz7m4   1/1   Running   0     7m28s
+    top: kd-parser-655d879895-6tvmx   999m   437Mi    | kd-parser-655d879895-qz7m4   998m   508Mi
+23:29:06  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     2m25s | kd-parser-655d879895-qz7m4   1/1   Running   0     7m33s
+    top: kd-parser-655d879895-6tvmx   999m   437Mi    | kd-parser-655d879895-qz7m4   998m   508Mi
+23:29:11  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     2m31s | kd-parser-655d879895-qz7m4   1/1   Running   0     7m39s
+    top: kd-parser-655d879895-6tvmx   999m   437Mi    | kd-parser-655d879895-qz7m4   998m   508Mi
+23:29:17  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     2m36s | kd-parser-655d879895-qz7m4   1/1   Running   0     7m44s
+    top: kd-parser-655d879895-6tvmx   999m   437Mi    | kd-parser-655d879895-qz7m4   998m   508Mi
+23:29:23  kd-parser   Deployment/kd-parser   cpu: 199%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     2m42s | kd-parser-655d879895-qz7m4   1/1   Running   0     7m50s
+    top: kd-parser-655d879895-6tvmx   999m   437Mi    | kd-parser-655d879895-qz7m4   998m   508Mi
+23:29:28  kd-parser   Deployment/kd-parser   cpu: 197%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     2m47s | kd-parser-655d879895-qz7m4   1/1   Running   0     7m55s
+    top: kd-parser-655d879895-6tvmx   999m   437Mi    | kd-parser-655d879895-qz7m4   973m   508Mi
+23:29:33  kd-parser   Deployment/kd-parser   cpu: 197%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     2m53s | kd-parser-655d879895-qz7m4   1/1   Running   0     8m1s
+    top: kd-parser-655d879895-6tvmx   999m   437Mi    | kd-parser-655d879895-qz7m4   973m   508Mi
+23:29:39  kd-parser   Deployment/kd-parser   cpu: 197%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     2m58s | kd-parser-655d879895-qz7m4   1/1   Running   0     8m6s
+    top: kd-parser-655d879895-6tvmx   788m   437Mi    | kd-parser-655d879895-qz7m4   4m     475Mi
+23:29:44  kd-parser   Deployment/kd-parser   cpu: 79%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     3m4s | kd-parser-655d879895-qz7m4   1/1   Running   0     8m12s
+    top: kd-parser-655d879895-6tvmx   788m   437Mi    | kd-parser-655d879895-qz7m4   4m     475Mi
+23:29:50  kd-parser   Deployment/kd-parser   cpu: 79%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     3m10s | kd-parser-655d879895-qz7m4   1/1   Running   0     8m18s
+    top: kd-parser-655d879895-6tvmx   788m   437Mi    | kd-parser-655d879895-qz7m4   4m     475Mi
+23:29:56  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     3m16s | kd-parser-655d879895-qz7m4   1/1   Running   0     8m24s
+    top: kd-parser-655d879895-6tvmx   4m    423Mi    | kd-parser-655d879895-qz7m4   3m    475Mi
+23:30:02  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     3m21s | kd-parser-655d879895-qz7m4   1/1   Running   0     8m29s
+    top: kd-parser-655d879895-6tvmx   4m    423Mi    | kd-parser-655d879895-qz7m4   3m    475Mi
+23:30:07  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     3m27s | kd-parser-655d879895-qz7m4   1/1   Running   0     8m35s
+    top: kd-parser-655d879895-6tvmx   4m    423Mi    | kd-parser-655d879895-qz7m4   3m    475Mi
+23:30:13  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     3m32s | kd-parser-655d879895-qz7m4   1/1   Running   0     8m40s
+    top: kd-parser-655d879895-6tvmx   3m    423Mi    | kd-parser-655d879895-qz7m4   3m    475Mi
+23:30:18  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     3m38s | kd-parser-655d879895-qz7m4   1/1   Running   0     8m46s
+    top: kd-parser-655d879895-6tvmx   3m    423Mi    | kd-parser-655d879895-qz7m4   3m    475Mi
+23:30:24  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     3m43s | kd-parser-655d879895-qz7m4   1/1   Running   0     8m51s
+    top: kd-parser-655d879895-6tvmx   3m    423Mi    | kd-parser-655d879895-qz7m4   3m    475Mi
+23:30:29  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     3m50s | kd-parser-655d879895-qz7m4   1/1   Running   0     8m58s
+    top: kd-parser-655d879895-6tvmx   3m    423Mi    | kd-parser-655d879895-qz7m4   3m    475Mi
+23:30:36  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Running   0     3m55s | kd-parser-655d879895-qz7m4   1/1   Running   0     9m3s
+    top: kd-parser-655d879895-6tvmx   3m    423Mi    | kd-parser-655d879895-qz7m4   3m    475Mi
+23:30:41  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Terminating   0     4m1s | kd-parser-655d879895-qz7m4   1/1   Running       0     9m9s
+    top: kd-parser-655d879895-6tvmx   3m    423Mi    | kd-parser-655d879895-qz7m4   3m    475Mi
+23:30:47  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-6tvmx   1/1   Terminating   0     4m7s | kd-parser-655d879895-qz7m4   1/1   Running       0     9m15s
+    top: kd-parser-655d879895-qz7m4   3m    475Mi
+23:30:53  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     2     11h
+    pods: kd-parser-655d879895-qz7m4   1/1   Running   0     9m20s
+    top: kd-parser-655d879895-qz7m4   3m    475Mi
+23:30:58  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     11h
+    pods: kd-parser-655d879895-qz7m4   1/1   Running   0     9m26s
+    top: kd-parser-655d879895-qz7m4   3m    475Mi
+23:31:04  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     11h
+    pods: kd-parser-655d879895-qz7m4   1/1   Running   0     9m31s
+    top: kd-parser-655d879895-qz7m4   3m    475Mi
