@@ -1,0 +1,20 @@
+23:52:58  run 1: deleting all pods ['kd-parser-655d879895-gs8xh', 'kd-parser-655d879895-mjspm']
+23:52:58  pod "kd-parser-655d879895-gs8xh" deleted from app namespace
+pod "kd-parser-655d879895-mjspm" deleted from app namespace
+23:53:13  run 1: pod kd-parser-655d879895-969tj created 18:22:58, Ready after 14 s
+23:53:13  run 1: pod kd-parser-655d879895-z2gqf created 18:22:58, Ready after 14 s
+23:53:13  run 1: all replicas Ready after 14 s (slowest pod)
+23:53:19  run 2: deleting all pods ['kd-parser-655d879895-969tj', 'kd-parser-655d879895-z2gqf']
+23:53:19  pod "kd-parser-655d879895-969tj" deleted from app namespace
+pod "kd-parser-655d879895-z2gqf" deleted from app namespace
+23:53:36  run 2: pod kd-parser-655d879895-2xgh2 created 18:23:19, Ready after 17 s
+23:53:37  run 2: pod kd-parser-655d879895-nszj2 created 18:23:19, Ready after 17 s
+23:53:37  run 2: all replicas Ready after 17 s (slowest pod)
+23:53:42  run 3: deleting all pods ['kd-parser-655d879895-2xgh2', 'kd-parser-655d879895-nszj2']
+23:53:43  pod "kd-parser-655d879895-2xgh2" deleted from app namespace
+pod "kd-parser-655d879895-nszj2" deleted from app namespace
+23:54:01  run 3: pod kd-parser-655d879895-d8ct2 created 18:23:43, Ready after 14 s
+23:54:01  run 3: pod kd-parser-655d879895-v7vwp created 18:23:43, Ready after 17 s
+23:54:01  run 3: all replicas Ready after 17 s (slowest pod)
+23:54:06  run values (slowest pod per run): 14 s, 17 s, 17 s
+23:54:06  MEDIAN of 3 runs: 17 s

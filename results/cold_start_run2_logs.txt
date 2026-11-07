@@ -1,0 +1,8 @@
+== kd-parser-655d879895-2xgh2 ==
+INFO:     Started server process [1]
+checksums verified
+model loaded from s3://models/v1 (version v1)
+== kd-parser-655d879895-nszj2 ==
+INFO:     Started server process [1]
+checksums verified
+model loaded from s3://models/v1 (version v1)
