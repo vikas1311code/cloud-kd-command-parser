@@ -1,0 +1,13 @@
+time  hpa row / pods / top pods
+23:23:23  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     11h
+    pods: kd-parser-655d879895-qz7m4   1/1   Running   0     110s
+    top: kd-parser-655d879895-qz7m4   3m    375Mi
+23:23:28  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     11h
+    pods: kd-parser-655d879895-qz7m4   1/1   Running   0     116s
+    top: kd-parser-655d879895-qz7m4   3m    375Mi
+23:23:34  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     11h
+    pods: kd-parser-655d879895-qz7m4   1/1   Running   0     2m1s
+    top: kd-parser-655d879895-qz7m4   3m    375Mi
+23:23:39  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     11h
+    pods: kd-parser-655d879895-qz7m4   1/1   Running   0     2m7s
+    top: kd-parser-655d879895-qz7m4   141m   414Mi
