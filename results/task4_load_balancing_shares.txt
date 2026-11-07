@@ -1,0 +1,4 @@
+total successful 276
+kd-parser-655d879895-d8ct2 137 49.6%
+kd-parser-655d879895-v7vwp 139 50.4%
+model versions {'v1': 276}
