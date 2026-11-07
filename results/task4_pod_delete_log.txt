@@ -1,0 +1,25 @@
+23:48:17  start: 2 ready pods ['kd-parser-655d879895-b4kzq', 'kd-parser-655d879895-gs8xh'], probe -> 200 v1 kd-parser-655d879895-gs8xh
+23:48:17  locust started (standard: 4 users, 2 minutes)
+23:48:47  deleting pod kd-parser-655d879895-b4kzq
+23:48:47  kubectl: pod "kd-parser-655d879895-b4kzq" deleted from app namespace
+23:48:47  ready=1 pods=1 ['kd-parser-655d879895-gs8xh']
+23:48:51  ready=1 pods=2 ['kd-parser-655d879895-gs8xh', 'kd-parser-655d879895-mjspm']
+23:48:54  ready=1 pods=2 ['kd-parser-655d879895-gs8xh', 'kd-parser-655d879895-mjspm']
+23:48:57  ready=1 pods=2 ['kd-parser-655d879895-gs8xh', 'kd-parser-655d879895-mjspm']
+23:49:01  ready=1 pods=2 ['kd-parser-655d879895-gs8xh', 'kd-parser-655d879895-mjspm']
+23:49:04  ready=2 pods=2 ['kd-parser-655d879895-gs8xh', 'kd-parser-655d879895-mjspm']
+23:49:04  replica count restored after 17 s
+23:49:04  deployment: NAME        READY   UP-TO-DATE   AVAILABLE   AGE
+kd-parser   2/2     2            2           12h
+23:50:19  locust finished after 122 s
+23:50:19  Locust Aggregated: 262 requests, 0 failures = 0.000 %
+23:50:19  headers: {
+ "per_replica": {
+  "kd-parser-655d879895-b4kzq": 34,
+  "kd-parser-655d879895-gs8xh": 140,
+  "kd-parser-655d879895-mjspm": 88
+ },
+ "per_model_version": {
+  "v1": 262
+ }
+}
