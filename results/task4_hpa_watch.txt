@@ -1,0 +1,81 @@
+time  hpa row, then pods
+11:49:57  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     4m53s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     6m20s
+11:50:07  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     5m4s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     6m31s
+11:50:18  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     5m14s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     6m41s
+11:50:28  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     5m24s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     6m51s
+11:50:38  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     5m34s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     7m1s
+11:50:48  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     5m44s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     7m12s
+11:51:00  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     5m56s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     7m23s
+11:51:10  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     6m6s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     7m33s
+11:51:20  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     6m16s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     7m43s
+11:51:30  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     6m26s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     7m53s
+11:51:40  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     6m37s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     8m4s
+11:51:51  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     6m47s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     8m14s
+11:52:01  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     6m57s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     8m24s
+11:52:11  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     7m7s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     8m34s
+11:52:21  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     7m18s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     8m45s
+11:52:32  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     7m28s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     8m55s
+11:52:42  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     7m38s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     9m5s
+11:52:52  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     7m48s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     9m15s
+11:53:02  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     7m58s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     9m26s
+11:53:13  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     8m9s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     9m36s
+11:53:23  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     8m19s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     9m46s
+11:53:33  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     8m29s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     9m56s
+11:53:43  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     8m39s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     10m
+11:53:54  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     8m50s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     10m
+11:54:04  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     9m
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     10m
+11:54:14  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     9m10s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     10m
+11:54:24  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     9m20s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     10m
+11:54:35  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     9m31s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     10m
+11:54:45  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     9m41s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     11m
+11:54:55  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     9m51s
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     11m
+11:55:05  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     10m
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     11m
+11:55:16  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     10m
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     11m
+11:55:26  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     10m
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     11m
+11:55:36  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     10m
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     11m
+11:55:46  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     10m
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     12m
+11:55:56  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     10m
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     12m
+11:56:07  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     11m
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     12m
+11:56:17  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     11m
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     12m
+11:56:27  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     11m
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     12m
+11:56:38  kd-parser   Deployment/kd-parser   cpu: 0%/70%   1     2     1     11m
+         kd-parser-69b5d549b7-5zwfs   1/1   Running   0     13m
