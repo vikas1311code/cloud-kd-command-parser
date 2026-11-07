@@ -1,0 +1,5 @@
+23:55:18  start: exactly 2 Ready replicas: ['kd-parser-655d879895-d8ct2', 'kd-parser-655d879895-v7vwp']
+23:55:19  hpa: kd-parser   Deployment/kd-parser   cpu: 1%/70%   2     2     2     12h
+23:57:21  locust finished after 122 s
+23:57:21  end: pods (2, ['kd-parser-655d879895-d8ct2', 'kd-parser-655d879895-v7vwp'])
+23:57:21  Locust Aggregated: 276 requests, 0 failures = 0.000 %, median 1900 ms, 95% 2600 ms, 2.34 req/s

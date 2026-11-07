@@ -1,9 +1,9 @@
 {
   "per_replica": {
-    "kd-parser-655d879895-qz7m4": 263,
-    "kd-parser-655d879895-6tvmx": 205
+    "kd-parser-655d879895-v7vwp": 139,
+    "kd-parser-655d879895-d8ct2": 137
   },
   "per_model_version": {
-    "v1": 468
+    "v1": 276
   }
 }
