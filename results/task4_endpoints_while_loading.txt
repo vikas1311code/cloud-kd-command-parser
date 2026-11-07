@@ -1,0 +1,5 @@
+time  endpoints (kubectl get endpoints kd-parser -n app)
+11:43:39  kd-parser         2s  readyReplicas=
+11:43:42  kd-parser         6s  readyReplicas=
+11:43:46  kd-parser         9s  readyReplicas=
+11:43:50  kd-parser   10.42.0.17:8000,10.42.0.18:8000   13s  readyReplicas=2
