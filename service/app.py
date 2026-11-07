@@ -3,6 +3,7 @@ import json
 import os
 import socket
 import threading
+import time
 from contextlib import asynccontextmanager
 
 import boto3
@@ -27,7 +28,7 @@ with open(os.path.join(os.path.dirname(__file__), "schema.json"), encoding="utf-
 
 torch.set_num_threads(1)
 
-state = {"ready": False, "error": None}
+state = {"ready": False, "error": None, "failed": False}
 holder = {}
 infer_lock = threading.Lock()
 
@@ -71,19 +72,24 @@ def download_model():
 
 
 def load_model():
-    try:
-        download_model()
-        tok = AutoTokenizer.from_pretrained(MODEL_DIR)
-        tok.pad_token = tok.eos_token
-        model = AutoModelForCausalLM.from_pretrained(MODEL_DIR)
-        model.eval()
-        holder["tok"] = tok
-        holder["model"] = model
-        state["ready"] = True
-        print("model loaded from %s (version %s)" % (MODEL_URI, MODEL_VERSION), flush=True)
-    except Exception as e:
-        state["error"] = repr(e)
-        print("model load failed:", repr(e), flush=True)
+    for attempt in range(1, 9):
+        try:
+            download_model()
+            tok = AutoTokenizer.from_pretrained(MODEL_DIR)
+            tok.pad_token = tok.eos_token
+            model = AutoModelForCausalLM.from_pretrained(MODEL_DIR)
+            model.eval()
+            holder["tok"] = tok
+            holder["model"] = model
+            state["error"] = None
+            state["ready"] = True
+            print("model loaded from %s (version %s)" % (MODEL_URI, MODEL_VERSION), flush=True)
+            return
+        except Exception as e:
+            state["error"] = repr(e)
+            print("model load failed (attempt %d/8): %s" % (attempt, repr(e)), flush=True)
+            time.sleep(min(5 * attempt, 30))
+    state["failed"] = True
 
 
 @asynccontextmanager
@@ -105,6 +111,8 @@ def headers():
 
 @app.get("/healthz")
 def healthz():
+    if state["failed"]:
+        return JSONResponse({"status": "failed", "error": state["error"]}, status_code=503)
     return {"status": "alive"}
 
 

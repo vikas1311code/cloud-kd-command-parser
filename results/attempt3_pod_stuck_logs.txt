@@ -1,0 +1,7 @@
+
+INFO:     Started server process [1]
+model load failed: EndpointConnectionError('Could not connect 
+to the endpoint URL: "http://seaweedfs.data.svc.cluster.local:8
+333/models?list-type=2&prefix=v1%2F&encoding-type=url"')
+
+
