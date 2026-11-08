@@ -1,0 +1,97 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      model:
+        description: "Model to evaluate (untrained = deliberately bad, gate must fail)"
+        type: choice
+        options: [v1, v2, untrained]
+        default: v1
+
+env:
+  MODEL: ${{ inputs.model || 'v1' }}
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install ruff
+      - run: ruff check .
+
+  test:
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m unittest discover -s tests -v
+
+  evaluate:
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install CPU torch and transformers
+        run: |
+          pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cpu
+          pip install transformers==4.46.3 numpy==1.26.4
+      - name: Get model (GitHub Release asset, or untrained base model)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "$MODEL" = "untrained" ]; then
+            echo "MODEL_PATH=EleutherAI/pythia-70m" >> "$GITHUB_ENV"
+          else
+            mkdir -p artifacts/$MODEL
+            gh release download model-$MODEL --repo "$GITHUB_REPOSITORY" --dir artifacts/$MODEL
+            cd artifacts/$MODEL
+            grep model.safetensors model.sha256 | sed 's/^\([0-9a-f]*\) .*/\1  model.safetensors/' | sha256sum -c -
+            echo "MODEL_PATH=artifacts/$MODEL" >> "$GITHUB_ENV"
+          fi
+      - name: Generate predictions on validation.jsonl
+        run: python eval/gen_student.py --model "$MODEL_PATH" --out results/ci_pred.jsonl
+      - name: Score
+        run: python tools/score.py results/ci_pred.jsonl data/validation.jsonl --out results/ci_score.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: eval-${{ env.MODEL }}
+          path: |
+            results/ci_pred.jsonl
+            results/ci_score.json
+
+  gate:
+    needs: evaluate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: eval-${{ inputs.model || 'v1' }}
+          path: results
+      - name: Quality gate (json_validity must be at least 95)
+        run: python tools/score.py results/ci_pred.jsonl data/validation.jsonl --min-validity 95
+
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
