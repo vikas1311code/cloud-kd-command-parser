@@ -1,0 +1,5 @@
+Failed run (deliberately bad model: untrained Pythia-70M, stopped at the quality gate):
+https://github.com/vikas1311code/cloud-kd-command-parser/actions/runs/42463158533
+
+Passing run (model v1):
+https://github.com/vikas1311code/cloud-kd-command-parser/actions/runs/<ci #1 ka number yahan daal>
