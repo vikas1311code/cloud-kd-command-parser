@@ -147,8 +147,14 @@ def fetch_release(version):
             if not line.strip():
                 continue
             want, name = line.split()
-            if sha256(os.path.join(d, name)) != want:
-                sys.exit("CHECKSUM MISMATCH for %s %s, not uploading" % (version, name))
+            path = os.path.join(d, name)
+            if sha256(path) != want:
+                print("checksum mismatch for %s, downloading it again" % name, flush=True)
+                os.remove(path)
+                asset = next(x for x in assets if x["name"] == name)
+                download(asset["browser_download_url"], path, asset["size"])
+                if sha256(path) != want:
+                    sys.exit("CHECKSUM MISMATCH for %s %s, not uploading" % (version, name))
     print("checksums OK for", version)
     return d
 
