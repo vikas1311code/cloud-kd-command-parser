@@ -95,6 +95,7 @@ def sha256(path):
 
 
 def download(url, dest, size):
+    curl = shutil.which("curl")
     for attempt in range(1, 9):
         have = os.path.getsize(dest) if os.path.exists(dest) else 0
         if have == size:
@@ -102,22 +103,30 @@ def download(url, dest, size):
         if have > size:
             os.remove(dest)
             have = 0
-        req = urllib.request.Request(url, headers={"Range": "bytes=%d-" % have} if have else {})
         try:
-            with urllib.request.urlopen(req, timeout=60) as r, open(dest, "ab" if have else "wb") as f:
-                if have and r.status == 200:  # server ignored Range, restart
-                    f.seek(0)
-                    f.truncate()
-                while True:
-                    chunk = r.read(1 << 20)
-                    if not chunk:
-                        break
-                    f.write(chunk)
-        except Exception as e:  # network cut: resume on the next attempt
+            if curl:
+                subprocess.run([curl, "-sS", "-L", "-C", "-", "--retry", "3", "--retry-all-errors",
+                                "--retry-delay", "3", "-o", dest, url], check=True)
+            else:
+                hdr = {"User-Agent": "make-up/1.0"}
+                if have:
+                    hdr["Range"] = "bytes=%d-" % have
+                req = urllib.request.Request(url, headers=hdr)
+                with urllib.request.urlopen(req, timeout=60) as r, open(dest, "ab" if have else "wb") as f:
+                    if have and r.status == 200:  # server ignored Range, restart
+                        f.seek(0)
+                        f.truncate()
+                    while True:
+                        chunk = r.read(1 << 20)
+                        if not chunk:
+                            break
+                        f.write(chunk)
+        except (OSError, subprocess.CalledProcessError) as e:  # network cut: resume next attempt
             print("  attempt %d interrupted: %s" % (attempt, e), flush=True)
-            time.sleep(2)
-    if os.path.getsize(dest) != size:
-        sys.exit("could not download %s completely" % url)
+            time.sleep(min(5 * attempt, 40))
+    got = os.path.getsize(dest) if os.path.exists(dest) else 0
+    if got != size:
+        sys.exit("could not download %s completely (%d of %d bytes)" % (url, got, size))
 
 
 def fetch_release(version):
