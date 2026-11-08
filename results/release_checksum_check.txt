@@ -1,0 +1,7 @@
+Release asset checksum check
+v1  downloaded from Release: 0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5
+v1  in model_v1.sha256     : e808f7d94e086a9f6c5d585976577a843ec9f4439d476ea78aac7ccbccb30bc1
+v1  result: DIFFERENT
+v2  downloaded from Release: 0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5
+v2  in model_v2.sha256     : 70cf279e654d8276f133e2fb99ae4c0846f8cbc0e024e6d502229d3d0392e6f6
+v2  result: DIFFERENT
