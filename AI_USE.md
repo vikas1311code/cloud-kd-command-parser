@@ -24,4 +24,3 @@
 
 ## Limits
 - I did not copy results or claims I could not verify by running them.
-- <add here anything you changed or rejected yourself>
