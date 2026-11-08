@@ -103,9 +103,12 @@ def download(url, dest, size):
         if have > size:
             os.remove(dest)
             have = 0
+        if size < (1 << 20) and have:  # small file: restart, never resume a bad partial
+            os.remove(dest)
+            have = 0
         try:
             if curl:
-                subprocess.run([curl, "-sS", "-L", "-C", "-", "--retry", "3", "--retry-all-errors",
+                subprocess.run([curl, "-sS", "-f", "-L", "-C", "-", "--retry", "3", "--retry-all-errors",
                                 "--retry-delay", "3", "-o", dest, url], check=True)
             else:
                 hdr = {"User-Agent": "make-up/1.0"}
