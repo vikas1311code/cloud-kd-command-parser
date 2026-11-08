@@ -1,4 +1,3 @@
-import re
 p = "service/app.py"
 s = open(p, encoding="utf-8").read()
 

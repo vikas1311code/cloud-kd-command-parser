@@ -1,10 +1,8 @@
 import csv
 import datetime
 import json
-import os
 import subprocess
 import time
-import urllib.request
 
 HOST = "http://localhost:8081"
 LOG = "results/task4_load_balancing_log.txt"
