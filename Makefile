@@ -14,3 +14,10 @@ train: train-image
 .PHONY: service-image
 service-image:
 > docker build -t kd-service:v1 service
+
+.PHONY: up down
+up:
+> python scripts/make_up.py
+
+down:
+> k3d cluster delete cloudlab
